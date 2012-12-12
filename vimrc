@@ -9,7 +9,7 @@ filetype plugin indent on
 set nocompatible
 set number
 set ruler
-syntax enable
+syntax on
 set encoding=utf-8
 set laststatus=2 " always show the status bar
 set backspace=start,eol,indent
@@ -60,7 +60,7 @@ nnoremap <leader><space> :noh<cr>
 set linebreak
 
 " colorscheme
-set background=light
+set background=dark
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
@@ -138,6 +138,8 @@ set term=xterm
 " highlight current line
 set cursorline
 
+" add json syntax highlighting
+au BufNewFile,BufRead *.json set ft=javascript
 " enabled spell checking in git commit
 autocmd FileType gitcommit setlocal spell
 
