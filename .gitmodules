@@ -138,3 +138,9 @@
 [submodule "vim/bundle/tools/signify"]
 	path = vim/bundle/tools/signify
 	url = https://github.com/mhinz/vim-signify.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "tmux/plugins/tmux-battery"]
+	path = tmux/plugins/tmux-battery
+	url = https://github.com/tmux-plugins/tmux-battery.git
