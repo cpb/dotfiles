@@ -144,3 +144,9 @@
 [submodule "tmux/plugins/tmux-battery"]
 	path = tmux/plugins/tmux-battery
 	url = https://github.com/tmux-plugins/tmux-battery.git
+[submodule "rbenv"]
+	path = rbenv
+	url = git@github.com:sstephenson/rbenv.git
+[submodule "ruby-build"]
+	path = ruby-build
+	url = git@github.com:sstephenson/ruby-build.git
