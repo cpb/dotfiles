@@ -40,3 +40,11 @@ bindkey '5C' emacs-forward-word
 # history search up and down
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
+
+export ACKRC=".ackrc"
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+
+export PATH=$HOME/.rbenv/bin:$PATH
+
+eval "$(rbenv init -)"
+
