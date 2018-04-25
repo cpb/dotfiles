@@ -61,8 +61,8 @@ set linebreak
 
 " colorscheme
 set background=dark
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
+let g:solarized_contrast="low"
+let g:solarized_visibility="low"
 colorscheme solarized
 
 " make cursor move by visual lines instead of file lines (when wrapping)
@@ -133,7 +133,7 @@ nmap <leader>p "+gP
 nmap <leader>r :registers<CR>
 
 " fix issues with screen and ctrl+left/right
-set term=xterm
+set term=xterm-256color
 
 " highlight current line
 set cursorline
