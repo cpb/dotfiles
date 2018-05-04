@@ -5,6 +5,12 @@ desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
   Dir['*'].each do |file|
+    if file.include?("terminfo")
+      system %Q{tic -x "$PWD/#{file}"}
+
+      next
+    end
+
     next if %w[Rakefile README.md].include? file
 
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
