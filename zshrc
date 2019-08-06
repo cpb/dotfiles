@@ -8,7 +8,7 @@ ZSH_THEME="bira"
 DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(autojump brew bundler gem git vagrant knife)
+plugins=(autojump brew bundler gem git vagrant knife nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,4 +47,3 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 
 eval "$(rbenv init -)"
-
