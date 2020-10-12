@@ -47,3 +47,7 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 
 eval "$(rbenv init -)"
+
+function passphrase() {
+  sort --random-sort ~/.dotfiles/eff_large_wordlist.txt | head -n 7
+}
