@@ -1,0 +1,7 @@
+ brew 'rbenv'
+ brew 'ruby-build'
+ brew 'vim'
+ brew 'tmux'
+ brew 'ack'
+ brew 'most'
+ brew 'jq'
