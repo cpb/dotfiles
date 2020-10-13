@@ -53,3 +53,11 @@ alias s="b bin/rails s"
 alias c="b bin/rails c"
 alias t="b bin/rails test"
 
+parent_branch() {
+  git show-branch -a \
+    | grep '\*' \
+    | grep -v `git rev-parse --abbrev-ref HEAD` \
+    | head -n1 \
+    | sed 's/.*\[\(.*\)\].*/\1/' \
+    | sed 's/[\^~].*//'
+}
