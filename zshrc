@@ -53,7 +53,13 @@ alias s="b bin/rails s"
 alias c="b bin/rails c"
 alias t="b bin/rails test"
 
-parent_branch() {
+export DEFAULT_PARENT_BRANCH='master'
+
+function parent_branch() {
+  echo "${DEFAULT_PARENT_BRANCH:-$(guess_parent_branch)}"
+}
+
+function guess_parent_branch() {
   git show-branch -a \
     | grep '\*' \
     | grep -v `git rev-parse --abbrev-ref HEAD` \
