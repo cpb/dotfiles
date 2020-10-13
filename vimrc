@@ -175,6 +175,7 @@ let g:syntastic_auto_loc_list=2
 map <leader>rt :TagbarToggle<cr>
 
 " ctrlp
+let g:ctrlp_map = '<c-t>'
 let g:ctrlp_user_command = {
   \ 'types': {
     \ 1: ['.git', 'cd %s && git ls-files'],
