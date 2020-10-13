@@ -67,3 +67,11 @@ function guess_parent_branch() {
     | sed 's/.*\[\(.*\)\].*/\1/' \
     | sed 's/[\^~].*//'
 }
+
+function changed_test_files() {
+  git diff --name-only $(parent_branch) test | grep "_test.rb" | xargs
+}
+
+function tc() {
+  t $(changed_test_files)
+}
