@@ -21,7 +21,7 @@
 	url = git://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/tools/ctrlp"]
 	path = vim/bundle/tools/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
+	url = git://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "vim/bundle/tools/pasta"]
 	path = vim/bundle/tools/pasta
 	url = git://github.com/sickill/vim-pasta.git
@@ -147,3 +147,6 @@
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+[submodule "tomorrow-theme"]
+	path = tomorrow-theme
+	url = https://github.com/chriskempson/tomorrow-theme.git

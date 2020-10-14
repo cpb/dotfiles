@@ -45,6 +45,7 @@ export ACKRC=".ackrc"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
 export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=./bin:$PATH
 
 eval "$(rbenv init -)"
 
@@ -55,3 +56,30 @@ function passphrase() {
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias s="b bin/rails s"
+alias c="b bin/rails c"
+alias t="b bin/rails test"
+
+export DEFAULT_PARENT_BRANCH='master'
+
+function parent_branch() {
+  echo "${DEFAULT_PARENT_BRANCH:-$(guess_parent_branch)}"
+}
+
+function guess_parent_branch() {
+  git show-branch -a \
+    | grep '\*' \
+    | grep -v `git rev-parse --abbrev-ref HEAD` \
+    | head -n1 \
+    | sed 's/.*\[\(.*\)\].*/\1/' \
+    | sed 's/[\^~].*//'
+}
+
+function changed_test_files() {
+  git diff --name-only $(parent_branch) test | grep "_test.rb" | xargs
+}
+
+function tc() {
+  t $(changed_test_files)
+}
