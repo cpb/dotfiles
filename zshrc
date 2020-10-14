@@ -51,3 +51,7 @@ eval "$(rbenv init -)"
 function passphrase() {
   sort --random-sort ~/.dotfiles/eff_large_wordlist.txt | head -n 7
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
