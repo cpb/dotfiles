@@ -6,6 +6,9 @@ call pathogen#infect('~/.dotfiles/vim/bundle/colors/{}')
 
 filetype plugin indent on
 
+" Fixes typing p in ctrlp buffer https://github.com/ctrlpvim/ctrlp.vim/issues/447#issuecomment-396881940
+let g:pasta_disabled_filetypes = ['ctrlp']
+
 set nocompatible
 set number
 set ruler
