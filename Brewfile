@@ -1,5 +1,6 @@
 brew 'ack'
 brew 'autojump'
+brew 'ctags'
 brew 'jq'
 brew 'most'
 brew 'rbenv'
