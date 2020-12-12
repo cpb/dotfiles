@@ -150,3 +150,6 @@
 [submodule "tomorrow-theme"]
 	path = tomorrow-theme
 	url = https://github.com/chriskempson/tomorrow-theme.git
+[submodule "vim/bundle/tools/markdown-preview.nvim"]
+	path = vim/bundle/tools/markdown-preview.nvim
+	url = git@github.com:iamcco/markdown-preview.nvim.git
