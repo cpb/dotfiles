@@ -87,9 +87,6 @@
 [submodule "vim/bundle/langs/rails"]
 	path = vim/bundle/langs/rails
 	url = git://github.com/tpope/vim-rails.git
-[submodule "vim/bundle/langs/haml"]
-	path = vim/bundle/langs/haml
-	url = git://github.com/tpope/vim-haml.git
 [submodule "vim/bundle/langs/rspec"]
 	path = vim/bundle/langs/rspec
 	url = git://github.com/skwp/vim-rspec.git
@@ -108,30 +105,18 @@
 [submodule "vim/bundle/langs/csv"]
 	path = vim/bundle/langs/csv
 	url = git://github.com/vim-scripts/csv.vim.git
-[submodule "vim/bundle/langs/coffeescript"]
-	path = vim/bundle/langs/coffeescript
-	url = git://github.com/kchmck/vim-coffee-script.git
 [submodule "vim/bundle/langs/cucumber"]
 	path = vim/bundle/langs/cucumber
 	url = git://github.com/tpope/vim-cucumber.git
-[submodule "vim/bundle/langs/scala"]
-	path = vim/bundle/langs/scala
-	url = git://github.com/derekwyatt/vim-scala.git
 [submodule "vim/bundle/langs/html5"]
 	path = vim/bundle/langs/html5
 	url = git://github.com/othree/html5.vim.git
-[submodule "vim/bundle/langs/play"]
-	path = vim/bundle/langs/play
-	url = git://github.com/gre/play2vim.git
 [submodule "vim/bundle/tools/rbenv"]
 	path = vim/bundle/tools/rbenv
 	url = git://github.com/tpope/vim-rbenv.git
 [submodule "vim/bundle/tools/dispatch"]
 	path = vim/bundle/tools/dispatch
 	url = git://github.com/tpope/vim-dispatch.git
-[submodule "vim/bundle/langs/slim"]
-	path = vim/bundle/langs/slim
-	url = git://github.com/slim-template/vim-slim.git
 [submodule "vim/bundle/tools/airline"]
 	path = vim/bundle/tools/airline
 	url = https://github.com/bling/vim-airline.git
