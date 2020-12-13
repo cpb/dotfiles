@@ -30,7 +30,7 @@
 	url = git://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/tools/bufexplorer"]
 	path = vim/bundle/tools/bufexplorer
-	url = git://github.com/corntrace/bufexplorer.git
+	url = git@github.com:jlanzarotta/bufexplorer.git
 [submodule "vim/bundle/tools/surround"]
 	path = vim/bundle/tools/surround
 	url = git://github.com/tpope/vim-surround.git
