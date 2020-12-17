@@ -138,3 +138,12 @@
 [submodule "vim/bundle/tools/markdown-preview.nvim"]
 	path = vim/bundle/tools/markdown-preview.nvim
 	url = git@github.com:iamcco/markdown-preview.nvim.git
+[submodule "vim/bundle/tools/vim-test"]
+	path = vim/bundle/tools/vim-test
+	url = git@github.com:vim-test/vim-test.git
+[submodule "vim/bundle/tools/vim-projectionist"]
+	path = vim/bundle/tools/vim-projectionist
+	url = git@github.com:tpope/vim-projectionist.git
+[submodule "vim/bundle/tools/vim-rake"]
+	path = vim/bundle/tools/vim-rake
+	url = git@github.com:tpope/vim-rake.git
