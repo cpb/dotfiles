@@ -208,3 +208,5 @@ let g:airline_right_sep=''
 
 set exrc
 set secure
+
+let g:mkdp_auto_close = 0

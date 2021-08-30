@@ -76,10 +76,20 @@ function guess_parent_branch() {
     | sed 's/[\^~].*//'
 }
 
+function tests_path() {
+  [ -d "test" ] && echo "test" || echo "spec"
+}
+
 function changed_test_files() {
-  git diff --name-only $(parent_branch) test | grep "_test.rb" | xargs
+  git diff --name-only $(parent_branch) $(tests_path) | grep -E "_(test|spec).rb" | xargs
 }
 
 function tc() {
-  t $(changed_test_files)
+  t $(changed_test_files) $@
+}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+function bfg() {
+  java -jar ~/bfg.jar $@
 }
