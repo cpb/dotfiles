@@ -1,3 +1,4 @@
+cask 'gpg-suite'
 brew 'ack'
 brew 'autojump'
 brew 'ctags'
