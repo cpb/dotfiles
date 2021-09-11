@@ -35,10 +35,17 @@
 [branch]
 	autosetuprebase = always
 
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$PWD/$LOCAL\" \"$PWD/$REMOTE\"
+[merge]
+  tool = meld
 [mergetool]
-	keepBackup = false
-
-[mergetool "p4merge"]
-	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-	trustExitCode = false
-	keepTemporaries = false
+  prompt = false
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"

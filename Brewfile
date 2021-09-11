@@ -1,3 +1,4 @@
+# brew 'meld'
 cask 'gpg-suite'
 brew 'ack'
 brew 'autojump'
