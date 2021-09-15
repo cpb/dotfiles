@@ -1,4 +1,5 @@
 # brew 'meld'
+brew 'docker-completion'
 cask 'gpg-suite'
 brew 'ack'
 brew 'autojump'
