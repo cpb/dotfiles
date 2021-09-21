@@ -1,3 +1,7 @@
+brew 'node'
+brew 'watchman'
+brew 'yarn'
+brew 'kubernetes-cli'
 # brew 'meld'
 brew 'docker-completion'
 cask 'gpg-suite'
