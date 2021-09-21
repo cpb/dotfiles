@@ -93,3 +93,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 function bfg() {
   java -jar ~/bfg.jar $@
 }
+
+[ -s "$HOME/.work_credentials" ] && \. $HOME/.work_credentials
