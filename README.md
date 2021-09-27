@@ -29,7 +29,6 @@ Clone the repository to a location of your choosing and run `rake install`.
 * [indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 * [nerdtree](https://github.com/scrooloose/nerdtree) - filesystem browsing
 * [pasta](https://github.com/sickill/vim-pasta) - indent aware pasting
-* [powerline](https://github.com/Lokaltog/vim-powerline)
 * [repeat](https://github.com/tpope/vim-repeat) - allow plugin commands to be repeated with `.`
 * [supertab](https://github.com/ervandew/supertab)
 * [surround](https://github.com/tpope/vim-surround)
@@ -40,10 +39,8 @@ Clone the repository to a location of your choosing and run `rake install`.
 ### Languages
 
 * [bundler](https://github.com/tpope/vim-bundler)
-* [coffeescript](https://github.com/kchmck/vim-coffee-script)
 * [csv](https://github.com/vim-scripts/csv.vim)
 * [git](https://github.com/tpope/vim-git)
-* [haml](https://github.com/tpope/vim-haml)
 * [javascript](https://github.com/pangloss/vim-javascript)
 * [markdown](https://github.com/tpope/vim-markdown)
 * [rails](https://github.com/tpope/vim-rails)
