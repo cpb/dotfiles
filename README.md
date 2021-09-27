@@ -28,6 +28,7 @@ Clone the repository to a location of your choosing and run `rake install`.
 * [gist](https://github.com/mattn/gist-vim)
 * [indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 * [nerdtree](https://github.com/scrooloose/nerdtree) - filesystem browsing
+* [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - live preview of markdown in a scroll synchronized browser window
 * [pasta](https://github.com/sickill/vim-pasta) - indent aware pasting
 * [repeat](https://github.com/tpope/vim-repeat) - allow plugin commands to be repeated with `.`
 * [supertab](https://github.com/ervandew/supertab)
