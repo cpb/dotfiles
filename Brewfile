@@ -1,3 +1,4 @@
+brew 'awscli'
 brew 'node'
 brew 'watchman'
 brew 'yarn'
