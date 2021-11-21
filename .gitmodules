@@ -147,3 +147,6 @@
 [submodule "vim/bundle/tools/vim-rake"]
 	path = vim/bundle/tools/vim-rake
 	url = git@github.com:tpope/vim-rake.git
+[submodule "vim/bundle/tools/ale"]
+	path = vim/bundle/tools/ale
+	url = git@github.com:dense-analysis/ale.git

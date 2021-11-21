@@ -210,3 +210,26 @@ set exrc
 set secure
 
 let g:mkdp_auto_close = 0
+
+" ALE
+let g:ale_sign_warning = '▲'
+let g:ale_sign_error = '✗'
+highlight link ALEWarningSign String
+highlight link ALEErrorSign Title
+
+let g:ale_linters = {
+\  'ruby': ['rubocop', 'reek', 'ruby'],
+\}
+
+let g:ale_fixers = {
+\  'ruby': ['rubocop'],
+\}
+
+" let g:ale_ruby_rubocop_executable = '.bundle/bin/rubocop'
+let g:ale_ruby_rubocop_auto_correct_all = 1
+
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_javascript_eslint_executable = 'eslint_d'
+
+" show errors/warnings in airline
+let g:airline#extensions#ale#enabled = 1
