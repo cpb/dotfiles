@@ -103,3 +103,7 @@ function wiki() {
     git -C ./wiki commit -m "${MESSAGE}" &&
     git -C ./wiki push origin master
 }
+
+function update() {
+  gfa && git co main && ggpull && git co - && git rebase main && ggpush -f
+}
