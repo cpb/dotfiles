@@ -45,7 +45,6 @@ export ACKRC=".ackrc"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
 export PATH=$HOME/.rbenv/bin:$PATH
-export PATH=./bin:$PATH
 
 eval "$(rbenv init -)"
 
