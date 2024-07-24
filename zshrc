@@ -8,7 +8,14 @@ ZSH_THEME="bira"
 DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(autojump brew bundler gem git vagrant knife nvm)
+plugins=(
+  dotenv
+  brew
+  bundler
+  gem
+  git
+  nvm
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -45,8 +52,6 @@ export ACKRC=".ackrc"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
 export PATH=$HOME/.rbenv/bin:$PATH
-
-eval "$(rbenv init -)"
 
 function passphrase() {
   sort --random-sort ~/.dotfiles/eff_large_wordlist.txt | head -n 7
@@ -104,6 +109,32 @@ function wiki() {
     git -C ./wiki push origin master
 }
 
-function update() {
-  gfa && git co main && ggpull && git co - && git rebase main && ggpush -f
+function update-remote() {
+  gfa && git co ${BASE_BRANCH:-main} && ggpull && git co - && git rebase ${BASE_BRANCH:-main} && ggpush -f
 }
+
+function update() {
+  gfa && git co ${BASE_BRANCH:-main} && ggpull && git co - && git rebase ${BASE_BRANCH:-main}
+}
+
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+export PATH="/opt/homebrew/bin:$PATH"
+
+eval "$(rbenv init -)"
+
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+}
+
+alias pf="ggpush -f"
+alias pk="ggpush"
+alias ci="gitmoji -c"
+alias p="git add -p"
+alias a="git commit --amend"
+
+alias githash="git --no-pager log -1 --format=\"%H\""
+
