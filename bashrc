@@ -134,18 +134,16 @@ shopt -s nocaseglob
 # Mult-line commands to single line in history
 shopt -s cmdhist
 
+export PATH=/opt/homebrew/bin:$PATH
+
 # personal
 export PATH=~/bin:$PATH
 
 # No ^C
 stty -ctlecho
 
-# RVM
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-fi
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
