@@ -9,6 +9,11 @@
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=coverage
+--ignore-dir=webpack
+--ignore-dir=.licenses
+
+--ignore-file=ext:sql
+--ignore-file=is:tags
 
 --sort-files
 --color
