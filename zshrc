@@ -131,9 +131,7 @@ export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-}
+source <(fzf --zsh)
 
 alias pf="ggpush -f"
 alias pk="ggpush"
@@ -142,4 +140,3 @@ alias p="git add -p"
 alias a="git commit --amend"
 
 alias githash="git --no-pager log -1 --format=\"%H\""
-
