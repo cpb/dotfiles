@@ -1,0 +1,7 @@
+# For available configuration options, see:
+#   https://github.com/standardrb/standard
+ruby_version: 3.3.4
+ignore:
+ - 'oh-my-zsh/**/*'
+ - 'tmux/**/*'
+ - 'vim/**/*'
