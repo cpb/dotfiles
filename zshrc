@@ -32,6 +32,11 @@ alias ll='ls -lh'
 alias l='ls -lah'
 alias b='bundle exec'
 alias bi='bundle install --binstubs=.bin'
+alias p='git add -p'
+alias pk='ggpush'
+alias ci='gitmoji -c'
+
+alias v='nvim'
 
 # use most as pager if available
 if which most > /dev/null; then
