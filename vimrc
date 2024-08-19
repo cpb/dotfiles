@@ -86,8 +86,8 @@ set background=dark
 " under emphasizes comments
 " nice key-value contrast
 "minty
-colorscheme Tomorrow
-"colorscheme Tomorrow-Night-Eighties
+"colorscheme Tomorrow
+colorscheme Tomorrow-Night-Eighties
 "camo
 "colorscheme Tomorrow-Night
 
