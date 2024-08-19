@@ -11,7 +11,7 @@ task :install do
       next
     end
 
-    next if %w[Rakefile README.md].include? file
+    next if %w[Rakefile README.md nvim].include? file
 
     if File.exist?(File.join(ENV["HOME"], ".#{file.sub(".erb", "")}"))
       if File.identical? file, File.join(ENV["HOME"], ".#{file.sub(".erb", "")}")
@@ -35,6 +35,16 @@ task :install do
     else
       link_file(file)
     end
+  end
+
+  config_path = "#{ENV["HOME"]}/.config/"
+  FileUtils.mkdir_p(config_path)
+
+  if File.symlink?("#{config_path}/nvim") || Dir.exist?("#{config_path}/nvim")
+    puts "skipping ~/.config/nvim/"
+  else
+    puts "linking ~/.config/nvim"
+    system %(ln -s "$PWD/nvim" "$HOME/.config/nvim")
   end
 end
 
