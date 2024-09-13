@@ -6,5 +6,9 @@ vim.keymap.set("n", "<leader>to", ":lua require('neotest').output.open({enter = 
 vim.keymap.set("n", "<leader>tp", ":lua require('neotest').summary.open()<CR>", { desc = "RSpec summary" })
 vim.keymap.set("n", "<leader>td", ":lua require('neotest').run.run({ strategy = 'dap' })<CR>", { desc = "RSpec Debug" })
 
+vim.api.nvim_del_keymap("n", "<M-k>")
+vim.api.nvim_del_keymap("n", "<M-j>")
+vim.api.nvim_del_keymap("v", "<M-k>")
+vim.api.nvim_del_keymap("v", "<M-j>")
 vim.api.nvim_del_keymap("i", "<M-k>")
 vim.api.nvim_del_keymap("i", "<M-j>")
