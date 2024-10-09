@@ -32,6 +32,12 @@ local function setup_ruby_configuration(dap)
       current_file = true,
     }),
     extend_run_config({
+      name = "run rails test current_file:current_line",
+      command = "bundle",
+      args = { "exec", "rdbg", "-c", "--nonstop", "--", "rails", "test" },
+      current_line = true,
+    }),
+    extend_run_config({
       name = "run rspec current_file:current_line",
       command = "bundle",
       args = { "exec", "rdbg", "-c", "--nonstop", "--", "rspec" },
@@ -50,6 +56,7 @@ local function setup_ruby_configuration(dap)
     extend_run_config({
       name = "run rspec",
       command = "bundle",
+      waiting = 4000,
       args = { "exec", "rdbg", "-c", "--nonstop", "--", "rspec" },
     }),
     extend_run_config({ name = "bin/dev", command = "bin/dev" }),

@@ -39,7 +39,7 @@ return {
       ruby_ls = {
         mason = false,
         init_options = {
-          formatter = "standard",
+          formatter = "rubocop",
         },
         cmd = { vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
         on_attach = function(client, buffer)

@@ -24,6 +24,8 @@ return {
         "cpb/neotest-rspec",
         branch = "cpb/update-dap-strategy",
       },
+      "zidhuss/neotest-minitest",
+      "nvim-neotest/neotest-jest",
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
@@ -44,6 +46,28 @@ return {
                 "rspec",
               })
             end,
+          }),
+          require("neotest-minitest")({
+            test_cmd = function()
+              return vim.tbl_flatten({
+                "bundle",
+                "exec",
+                "rdbg",
+                "--nonstop",
+                "-c",
+                "--",
+                "rails",
+                "test",
+              })
+            end,
+          }),
+          require("neotest-jest")({
+            jestCommand = "yarn test",
+            jestConfigFile = "jest.config.js",
+            cwd = function()
+              return vim.fn.getcwd()
+            end,
+            logLevel = "DEBUG",
           }),
         },
       })

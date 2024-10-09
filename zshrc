@@ -122,8 +122,9 @@ function update() {
   gfa && git co ${BASE_BRANCH:-main} && ggpull && git co - && git rebase ${BASE_BRANCH:-main}
 }
 
-alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 export PATH="/opt/homebrew/bin:$PATH"
+
+export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
 
 eval "$(rbenv init -)"
 
@@ -140,3 +141,5 @@ alias p="git add -p"
 alias a="git commit --amend"
 
 alias githash="git --no-pager log -1 --format=\"%H\""
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
