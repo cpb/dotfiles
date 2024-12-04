@@ -32,6 +32,14 @@ local function add_ruby_deps_command(client, bufnr)
   })
 end
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.rb",
+  callback = function()
+    -- print("Formatting buffer on save...")
+    vim.lsp.buf.format()
+  end,
+})
+
 return {
   {
     "neovim/nvim-lspconfig",
