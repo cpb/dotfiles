@@ -10,9 +10,9 @@ return {
         ruby_lsp = {
           mason = false,
           init_options = {
-            formatter = "rubocop",
+            formatter = "rubocop_internal",
           },
-          cmd = { vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
+          cmd = { "bundle", "exec", "ruby-lsp" },
         },
       },
     },
