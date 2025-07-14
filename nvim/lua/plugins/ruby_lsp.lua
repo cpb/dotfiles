@@ -1,7 +1,7 @@
 local lspconfig = require("lspconfig")
-lspconfig.sorbet.setup({
-  cmd = { vim.fn.expand("~/.rbenv/shims/srb"), "tc", "--lsp" },
-})
+-- lspconfig.sorbet.setup({
+--   cmd = { vim.fn.expand("~/.rbenv/shims/srb"), "tc", "--lsp" },
+-- })
 return {
   {
     "neovim/nvim-lspconfig",
