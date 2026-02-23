@@ -104,6 +104,7 @@ function bfg() {
 }
 
 [ -s "$HOME/.work_credentials" ] && \. $HOME/.work_credentials
+[ -s "$HOME/.zshrc-work" ] && source "$HOME/.zshrc-work"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
