@@ -130,8 +130,6 @@ export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
 eval "$(rbenv init -)"
 
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-
 
 source <(fzf --zsh)
 
@@ -144,3 +142,18 @@ alias a="git commit --amend"
 alias githash="git --no-pager log -1 --format=\"%H\""
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+copyeach () {
+	emulate -L zsh
+	set -o pipefail
+	echo "Press any key to copy each line; Ctrl-C to quit."
+	local i=0
+	while IFS= read -r line
+	do
+		[[ -z "$line" ]] && continue
+		printf %s "$line" | pbcopy
+		(( i++ ))
+		echo "→ Copied [$i]: $line"
+		read -sk "?Press any key for next..." && echo
+	done
+}
