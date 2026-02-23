@@ -20,10 +20,6 @@ return {
   {
     "nvim-neotest/neotest",
     dependencies = {
-      {
-        "cpb/neotest-rspec",
-        branch = "cpb/update-dap-strategy",
-      },
       "zidhuss/neotest-minitest",
       "nvim-neotest/neotest-jest",
       "nvim-neotest/nvim-nio",
@@ -34,22 +30,9 @@ return {
     config = function()
       require("neotest").setup({
         adapters = {
-          require("neotest-rspec")({
-            rspec_cmd = function()
-              return vim.tbl_flatten({
-                "bundle",
-                "exec",
-                "rdbg",
-                "--nonstop",
-                "-c",
-                "--",
-                "rspec",
-              })
-            end,
-          }),
           require("neotest-minitest")({
             test_cmd = function()
-              return vim.tbl_flatten({
+              return {
                 "bundle",
                 "exec",
                 "rdbg",
@@ -58,7 +41,7 @@ return {
                 "--",
                 "rails",
                 "test",
-              })
+              }
             end,
           }),
           require("neotest-jest")({
