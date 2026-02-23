@@ -43,7 +43,7 @@ if which most > /dev/null; then
   export PAGER=most
 fi
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # ctrl+left/right
 bindkey '5D' emacs-backward-word
