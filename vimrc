@@ -2,7 +2,6 @@
 runtime bundle/core/pathogen/autoload/pathogen.vim
 call pathogen#infect('~/.dotfiles/vim/bundle/tools/{}')
 call pathogen#infect('~/.dotfiles/vim/bundle/langs/{}')
-call pathogen#infect('~/.dotfiles/vim/bundle/colors/{}')
 
 filetype plugin indent on
 
@@ -65,31 +64,8 @@ set linebreak
 " colorscheme
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-" set termguicolors
 set background=dark
-" let g:solarized_contrast="normal"
-" let g:solarized_visibility="high"
-" depends on iterm color profiles beecause it is made by color nerds
-" doesn't appear to have key-value contrast in method arguments
-" doesn't appear to have the negative space contrast 'feature' of all the ones
-" below
-" colorscheme solarized
-
-" beautiful light cyan instance variables
-" nice emphasise on comments
-" lacks key value contrast
-" colorscheme desertEx
-
-" decepticons, slightly weird contrast on class names
-" colorscheme liquidcarbon
-
-" under emphasizes comments
-" nice key-value contrast
-"minty
-"colorscheme Tomorrow
 colorscheme Tomorrow-Night-Eighties
-"camo
-"colorscheme Tomorrow-Night
 
 " make cursor move by visual lines instead of file lines (when wrapping)
 map k gk
