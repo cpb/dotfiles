@@ -157,3 +157,10 @@ copyeach () {
 		read -sk "?Press any key for next..." && echo
 	done
 }
+
+# Added by Antigravity
+export PATH="/Users/cpb/.antigravity/antigravity/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+eval "$(pyenv virtualenv-init -)"
