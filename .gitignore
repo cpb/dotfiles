@@ -2,3 +2,4 @@ gitconfig
 vim/.netrwhist
 tmux/resurrect/*
 Brewfile.lock.json
+.claude/
