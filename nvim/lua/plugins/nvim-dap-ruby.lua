@@ -71,8 +71,6 @@ return {
     dependencies = {
       {
         "cpb/nvim-dap-ruby",
-        dev = true,
-        dir = "/Users/cpb/oss/nvim-dap-ruby",
       },
     },
     config = function()
