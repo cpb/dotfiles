@@ -139,6 +139,27 @@ function update() {
   gfa && git co ${BASE_BRANCH:-main} && ggpull && git co - && git rebase ${BASE_BRANCH:-main}
 }
 
+# Launch nvim with the claude-code panel pre-toggled. Both flags are independently
+# optional; trailing args are forwarded to nvim (file paths, +cmd, etc).
+#   nvim-claude                                              # plain nvim
+#   nvim-claude --args "--add-dir /foo --permission-mode auto"
+#   nvim-claude --prompt 'Read README.md and stand by'
+#   nvim-claude --args "..." --prompt '...' path/to/file
+# Use single quotes around the prompt to keep backticks/$ literal.
+function nvim-claude() {
+  emulate -L zsh
+  local args="" prompt=""
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --args)   args="$2";   shift 2 ;;
+      --prompt) prompt="$2"; shift 2 ;;
+      --) shift; break ;;
+      *) break ;;
+    esac
+  done
+  CLAUDECODE_ARGS="$args" CLAUDECODE_PROMPT="$prompt" nvim "$@"
+}
+
 export PATH="/opt/homebrew/bin:$PATH"
 
 export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
