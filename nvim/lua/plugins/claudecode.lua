@@ -2,13 +2,21 @@
 --   CLAUDECODE_ARGS   — extra flags appended to `claude` (e.g. --add-dir, --permission-mode)
 --   CLAUDECODE_PROMPT — initial prompt; auto-shellescape'd so backticks/quotes are safe
 -- If either is set, the panel auto-toggles open at startup with those args.
-local function startup_args()
+-- Captured once at module load and cleared from vim.env so child nvim processes
+-- (e.g. Claude Code's Ctrl-G prompt editor) don't inherit them and re-open a panel.
+local _captured_args = (function()
   local args = vim.env.CLAUDECODE_ARGS or ""
   local prompt = vim.env.CLAUDECODE_PROMPT
+  vim.env.CLAUDECODE_ARGS = nil
+  vim.env.CLAUDECODE_PROMPT = nil
   if prompt and prompt ~= "" then
     args = (args ~= "" and (args .. " ") or "") .. vim.fn.shellescape(prompt)
   end
   return args ~= "" and args or nil
+end)()
+
+local function startup_args()
+  return _captured_args
 end
 
 return {
