@@ -160,6 +160,8 @@ function nvim-claude() {
   CLAUDECODE_ARGS="$args" CLAUDECODE_PROMPT="$prompt" nvim "$@"
 }
 
+function haiku() { claude --model haiku -p "$@" }
+
 export PATH="/opt/homebrew/bin:$PATH"
 
 export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
